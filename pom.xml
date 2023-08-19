@@ -14,7 +14,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.4.0</app.runtime>
-		<mule.maven.plugin.version>3.8.1</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.8.2</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -28,23 +28,23 @@
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
-				 <extensions>true</extensions>
-  <configuration>
-    <cloudHubDeployment>
-      <uri>https://anypoint.mulesoft.com</uri>
-      <muleVersion>${app.runtime}</muleVersion>
-      <username>${username}</username>
-      <password>${password}</password>
-      <applicationName>${cloudhub.application.name}</applicationName>
-      <environment>${environment}</environment>
-      <region>${region}</region>
-      <workers>${workers}</workers>
-      <workerType>${workerType}</workerType>
-      <properties>
-        <key>value</key>
-      </properties>
-    </cloudHubDeployment>
-  </configuration>
+				<extensions>true</extensions>
+				<configuration>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>${app.runtime}</muleVersion>
+						<username>${username}</username>
+						<password>${password}</password>
+						<applicationName>${cloudhub.application.name}</applicationName>
+						<environment>${environment}</environment>
+						<region>${region}</region>
+						<workers>${workers}</workers>
+						<workerType>${workerType}</workerType>
+						<properties>
+							<key>value</key>
+						</properties>
+					</cloudHubDeployment>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -78,11 +78,11 @@
 			<layout>default</layout>
 		</repository>
 		<repository>
-        <id>mulesoft-public</id>
-        <name>MuleSoft Public Repository</name>
-        <url>https://repository.mulesoft.org/nexus/content/repositories/public/</url>
-        <layout>default</layout>
-    </repository>
+			<id>mulesoft-public</id>
+			<name>MuleSoft Public Repository</name>
+			<url>https://repository.mulesoft.org/nexus/content/repositories/public/</url>
+			<layout>default</layout>
+		</repository>
 	</repositories>
 
 	<pluginRepositories>
